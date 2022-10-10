@@ -1,15 +1,13 @@
 import { defineStore, storeToRefs } from "pinia";
 import { AppState } from "./types";
 
-export const userAppStore = defineStore('app', {
+export const useAppStore = defineStore('app', {
   state: ():AppState  => ({
-    count: 0
+    navbar: true,
+    menu: true,
+    menuWidth: 220,
+    hideMenu: false
   }),
   actions: {
-    increment() {
-      this.$patch({
-        count: this.count+1.
-      })
-    },
   }
 })

@@ -1,3 +1,6 @@
 export interface AppState {
-  count: number;
+  navbar: boolean;
+  menu: boolean;
+  menuWidth: number;
+  hideMenu: boolean;
 }

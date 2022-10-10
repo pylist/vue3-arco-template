@@ -1,20 +1,17 @@
 <script setup lang="ts">
-import { defineComponent, ref } from 'vue'
-import { userAppStore } from '@/store/app'
-import { computed } from '@vue/reactivity';
+import { ref } from 'vue'
 
 defineProps<{ msg: string }>()
 
-const appStore = userAppStore()
 
-const count = computed(() => appStore.count)
+const count = ref(1)
 
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
-  <a-button type="primary" @click="appStore.increment()">count is: {{ count }}</a-button>
+  <a-button type="primary" @click="count++">count is: {{ count }}</a-button>
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
