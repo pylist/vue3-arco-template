@@ -18,26 +18,26 @@
 <script lang="ts" setup>
 import Footer from '@/components/Footer.vue'
 import NavBar from '@/components/NavBar.vue'
-import { computed } from 'vue';
+import { computed } from 'vue'
 import { useAppStore } from '@/store/app'
 
-const appStore = useAppStore();
+const appStore = useAppStore()
 
-const navbar = computed(() => appStore.navbar);
+const navbar = computed(() => appStore.navbar)
 const navbarHeight = '60px'
-const renderMenu = computed(() => appStore.menu);
-const hideMenu = computed(() => appStore.hideMenu);
+const renderMenu = computed(() => appStore.menu)
+const hideMenu = computed(() => appStore.hideMenu)
 const menuWidth = computed(() => {
-    return appStore.menuWidth;
-  });
+  return appStore.menuWidth
+})
 
 const paddingStyle = computed(() => {
   const paddingLeft =
-      renderMenu.value && !hideMenu.value
-        ? { paddingLeft: `${menuWidth.value}px` }
-        : {};
-    const paddingTop = navbar.value ? { paddingTop: navbarHeight } : {};
-    return { ...paddingLeft, ...paddingTop }
+    renderMenu.value && !hideMenu.value
+      ? { paddingLeft: `${menuWidth.value}px` }
+      : {}
+  const paddingTop = navbar.value ? { paddingTop: navbarHeight } : {}
+  return { ...paddingLeft, ...paddingTop }
 })
 </script>
 
@@ -69,5 +69,4 @@ const paddingStyle = computed(() => {
   background-color: var(--color-fill-2);
   transition: padding 0.2s cubic-bezier(0.34, 0.69, 0.1, 1);
 }
-
 </style>

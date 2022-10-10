@@ -3,7 +3,9 @@ export const SetStorage = (key: string, val: any) => {
 }
 
 export const GetStorage = (key: string) => {
-  if (!key) { return }
+  if (!key) {
+    return
+  }
   const val = localStorage.getItem(key)
   if (val) {
     return JSON.parse(val)

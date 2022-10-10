@@ -10,9 +10,7 @@ export default defineConfig({
     vue(),
     // 自动导入组件
     Components({
-      resolvers: [
-        ArcoResolver()
-      ]
+      resolvers: [ArcoResolver()]
     })
   ],
   // 设置@路径

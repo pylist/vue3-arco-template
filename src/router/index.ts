@@ -1,6 +1,6 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router"
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
-import Layout from "@/layout/Layout.vue"
+import Layout from '@/layout/Layout.vue'
 
 const routes: RouteRecordRaw[] = [
   {

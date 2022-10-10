@@ -10,20 +10,20 @@ const service = Axios.create({
 
 // 请求拦截
 service.interceptors.request.use(
-  config => {
+  (config) => {
     return config
   },
-  error => {
+  (error) => {
     return Promise.reject(error)
   }
 )
 
 // 响应拦截
 service.interceptors.response.use(
-  response => {
+  (response) => {
     return response.data
   },
-  error => {
+  (error) => {
     Message.error(error)
     return Promise.reject(error)
   }

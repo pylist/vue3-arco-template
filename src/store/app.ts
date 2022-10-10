@@ -1,13 +1,12 @@
-import { defineStore, storeToRefs } from "pinia";
-import { AppState } from "./types";
+import { defineStore, storeToRefs } from 'pinia'
+import { AppState } from './types'
 
 export const useAppStore = defineStore('app', {
-  state: ():AppState  => ({
+  state: (): AppState => ({
     navbar: true,
     menu: true,
     menuWidth: 220,
     hideMenu: false
   }),
-  actions: {
-  }
+  actions: {}
 })

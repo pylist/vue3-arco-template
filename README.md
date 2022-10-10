@@ -4,4 +4,4 @@
 
 eslint
 
-安装eslint带的依赖`eslint`,`eslint-plugin-vue`,`@typescript-eslint/eslint-plugin`,`@typescript-eslint/parser`,
+安装 eslint 带的依赖`eslint`,`eslint-plugin-vue`,`@typescript-eslint/eslint-plugin`,`@typescript-eslint/parser`,
