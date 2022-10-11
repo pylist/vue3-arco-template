@@ -4,7 +4,7 @@ import Layout from '@/layout/Layout.vue'
 
 const routes: RouteRecordRaw[] = [
   {
-    path: '/redirect',
+    path: '/',
     component: Layout,
     children: [
       {
@@ -12,6 +12,10 @@ const routes: RouteRecordRaw[] = [
         component: () => import('@/views/Home/index.vue')
       }
     ]
+  },
+  {
+    path: '/login',
+    component: () => import('@/views/Login/Login.vue')
   }
 ]
 
