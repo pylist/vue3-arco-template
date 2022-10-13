@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import '@/assets/style/global.less'
 
 const app = createApp(App)
 // 挂载路由
