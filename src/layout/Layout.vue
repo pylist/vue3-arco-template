@@ -80,7 +80,7 @@ const setCollapsed = (val: boolean) => {
   top: 0;
   left: 0;
   z-index: 99;
-  height: 100%;
+  height: calc(100% - 60px);
   .menu-wrapper {
     height: 100%;
     overflow: auto;

@@ -1,0 +1,9 @@
+<template>
+  <a-list>
+    <a-list-item>消息通知1</a-list-item>
+    <a-list-item>消息通知2</a-list-item>
+    <a-list-item>消息通知3</a-list-item>
+    <a-list-item>消息通知4</a-list-item>
+    <a-list-item>消息通知5</a-list-item>
+  </a-list>
+</template>
