@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import store from '@/store'
 import '@/assets/style/global.less'
 
 const app = createApp(App)
@@ -7,7 +8,6 @@ const app = createApp(App)
 import router from './router'
 app.use(router)
 // 挂载Pinia
-import { createPinia } from 'pinia'
-app.use(createPinia())
+app.use(store)
 
 app.mount('#app')

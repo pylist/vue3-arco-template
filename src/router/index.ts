@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
 import Layout from '@/layout/Layout.vue'
+import { useUserStore } from '@/store'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -18,6 +19,7 @@ const routes: RouteRecordRaw[] = [
     ]
   },
   {
+    name: 'Login',
     path: '/login',
     component: () => import('@/views/Login/Login.vue')
   }
@@ -26,6 +28,19 @@ const routes: RouteRecordRaw[] = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes
+})
+
+const isAuthenticated = () => {
+  const userStore = useUserStore()
+  if (userStore.getToken()) {
+    return true
+  }
+  return false
+}
+
+router.beforeEach(async (to, from, next) => {
+  if (to.name !== 'Login' && !isAuthenticated()) next({ name: 'Login' })
+  else next()
 })
 
 export default router

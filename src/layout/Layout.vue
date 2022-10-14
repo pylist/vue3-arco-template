@@ -31,7 +31,7 @@ import Footer from '@/components/Footer.vue'
 import NavBar from '@/components/NavBar.vue'
 import Menu from '@/components/Menu.vue'
 import { computed } from 'vue'
-import { useAppStore } from '@/store/app'
+import { useAppStore } from '@/store'
 
 const appStore = useAppStore()
 

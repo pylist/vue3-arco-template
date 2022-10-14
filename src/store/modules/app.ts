@@ -1,7 +1,14 @@
 import { defineStore } from 'pinia'
-import { AppState } from './types'
 
-export const useAppStore = defineStore('app', {
+interface AppState {
+  navbar: boolean
+  menu: boolean
+  menuWidth: number
+  menuCollapse: boolean
+  hideMenu: boolean
+}
+
+const useAppStore = defineStore('app', {
   state: (): AppState => ({
     navbar: true,
     menu: true,
@@ -15,3 +22,5 @@ export const useAppStore = defineStore('app', {
     }
   }
 })
+
+export default useAppStore

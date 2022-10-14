@@ -3,5 +3,5 @@ export const SetStorage = (key: string, val: string) => {
 }
 
 export const GetStorage = (key: string) => {
-  return localStorage.getItem(key)
+  return localStorage.getItem(key) || ''
 }
